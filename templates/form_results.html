@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Result</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .result-message {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #2ecc71;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #2ecc71;
+            border-radius: 5px;
+        }
+
+        .defaulter-message {
+            color: #e74c3c;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #e74c3c;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Credit Risk Analysis Result</h1>
+
+    <div class="result-message">
+        {% if predictions == 0 %}
+            Customer is having good credit. Will not be a defaulter in the future.
+        {% else %}
+            Customer is not having good credit. Customer will be a defaulter in the future.
+        {% endif %}
+    </div>
+
+    {% if predictions == 1 %}
+        <div class="defaulter-message">
+            It's important to carefully review and manage the credit situation for this customer.
+        </div>
+    {% endif %}
+
+</body>
+
+</html>
