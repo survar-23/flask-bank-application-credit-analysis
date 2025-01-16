@@ -3,81 +3,95 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application</title>
     <style>
-
         body {
-            background-color: #f0f0f0; /* Light grey background color */
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
         }
 
         header {
-            background-color: #3498db; /* Blue header background color */
-            color: #fff; /* White text color */
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            margin-bottom: 10px;
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
         }
 
-        h3 {
-            color: #333; /* Dark text color */
-            margin-bottom: 30px;
+        header h3 {
+            font-weight: 300;
+            margin: 0;
+        }
+        header img {
+            height: 50px;
+            float: left;
+            margin-right: 15px;
         }
 
-        p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-            text-align: justify;
+        main {
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        a {
-            color: #3498db; /* Blue link color */
-            text-decoration: none;
+        main img {
+            max-width: 160px;
+            margin: 18px auto;
         }
 
-        img {
-            max-width: 10%;
-            height: 10%;
-            display: block;
-            margin: 20px auto;
+        main p {
+            max-width: 800px;
+            margin: 0 auto 18px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         a.button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #2ecc71; /* Green button background color */
-            color: #fff; /* White text color */
+            background-color: #2ecc71;
+            color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
         }
 
         a.button:hover {
-            background-color: #27ae60; /* Darker green on hover */
+            background-color: #27ae60;
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #3498db; /* Blue footer background color */
-            color: #fff; /* White text color */
+            background: #3498db;
+            color: white;
             text-align: center;
-            padding: 10px;
+            padding: 6px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
     </style>
-    <title>Bank Application</title>
+
 </head>
 
 <body>
 
     <header>
-        <h1>Bank Application (Credit Risk Analytics)</h1>
+        <img src="static/images/Logo.png" alt="Bank Logo">
+        <h1>Bank Application</h1>
         <h3>Smart Credit Scoring for a Secure Financial Future</h3>
     </header>
 
