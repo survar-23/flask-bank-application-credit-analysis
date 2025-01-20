@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from flask import Flask, request, render_template
 
-model = pickle.load(open('rf_model.pkl', 'rb'))
+model = pickle.load(open('rf_model1.pkl', 'rb'))
 
 app = Flask(__name__)
 
@@ -18,18 +18,16 @@ def is_numeric(value):
 def index():
     return render_template('index.html')
 
-@app.route("/form.html", methods=['GET', 'POST'])
+@app.route("/form1.html", methods=['GET', 'POST'])
 
 def form():
     if request.method == 'GET':
-        return render_template('form.html')
+        return render_template('form1.html')
     elif request.method == 'POST':
         form_inputs = request.form.to_dict()
         predictions = model.predict(pd.DataFrame(form_inputs, index=[0]).astype(float))
         #return_stmt = "Customer is having good credit. Will not be defaulter in future." if predictions==0 else "Customer is not having good credit. Customer will be defaulter in future."
-        return render_template('form_results.html', predictions=predictions)
+        return render_template('form_results1.html', predictions=predictions)
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-	
