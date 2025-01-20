@@ -16,9 +16,9 @@ def is_numeric(value):
 
 @app.route("/")
 def index():
-    return render_template('index1.html')
+    return render_template('index.html')
 
-@app.route("/form.html", methods=['GET', 'POST'])
+@app.route("/form1.html", methods=['GET', 'POST'])
 
 def form():
     if request.method == 'GET':

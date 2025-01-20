@@ -7,6 +7,33 @@
     <title>Credit Risk Analysis Result</title>
 
     <style>
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        header h3 {
+            margin: 5px 0 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        header img {
+            height: 50px;
+            float: left;
+            margin-right: 15px;
+        }
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
@@ -19,6 +46,12 @@
             color: #007bff;
             margin-bottom: 20px;
             font-size: 2rem;
+        }
+
+        header img {
+            height: 50px;
+            float: left;
+            margin-right: 15px;
         }
 
         .result-message {
@@ -77,8 +110,12 @@
 </head>
 
 <body>
-
-    <h1>Credit Risk Analysis Result</h1>
+        <header>
+            <img src="static/images/Logo_Image.png" alt="Bank Logo">
+            <h1>Bank Application (Credit Risk Analytics)</h1>
+            <h3>Smart Credit Scoring for a Secure Financial Future</h3>
+        </header>
+        <h2>Credit Risk Analysis Result</h2>
 
     <div class="result-message {% if predictions == 0 %}good-credit{% else %}bad-credit{% endif %}">
         {% if predictions == 0 %}
